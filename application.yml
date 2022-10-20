@@ -1,0 +1,21 @@
+spring:
+  profiles: 
+    active:
+    - dev
+    
+---
+
+spring:
+  profiles: dev #开发环境
+  applcation:
+    name: microservicecloud-config-dev
+    
+---
+    
+spring:
+  profiles: dev #测试环境
+  applcation:
+    name: microservicecloud-config-test  
+
+
+#注意：编码必须是UTF-8的格式！！！！
