@@ -1,8 +1,8 @@
 spring:
-  profiles: 
+  profiles:
     active:
-    - dev
-    
+      - dev
+
 ---
 server:
   port: 8001
@@ -22,29 +22,15 @@ spring:
       initial-size: 5     #初始化连接数
       max-total: 5              #最大连接数
       max-wait-millis: 200    #等待连接获取的最大超时时间
-  
+
 
 mybatis:
 
   config-location: classpath:mybatis/mybatis.cfg.xml                            #mybatis配置文件
   type-aliases-package: com.example.springcloud.entity                  #所有的entity别名类所在的位置
   mapper-locations:
-    - classpath:mybatis/mapper/**/*.xml                                 #mapper映射文件  
+    - classpath:mybatis/mapper/**/*.xml                                 #mapper映射文件
 
-eureka:
-  instance:
-    hostname: eureka7001.com
-
----
-
-server:
-  port: 7001
-
-spring:
-  profiles: test #开发环境
-  application:
-    name: microservicecloud-config-eureka-client
-    
 eureka:
   client:
     service-url:
@@ -58,7 +44,7 @@ server:
   port: 8001
 
 spring:
-  profiles: test  #开发环境
+  profiles: test  #测试环境
   application:
     name: microservicecloud-config-dept-client
   datasource:
@@ -72,29 +58,15 @@ spring:
       initial-size: 5     #初始化连接数
       max-total: 5              #最大连接数
       max-wait-millis: 200    #等待连接获取的最大超时时间
-  
+
 
 mybatis:
 
   config-location: classpath:mybatis/mybatis.cfg.xml                            #mybatis配置文件
   type-aliases-package: com.example.springcloud.entity                  #所有的entity别名类所在的位置
   mapper-locations:
-    - classpath:mybatis/mapper/**/*.xml                                 #mapper映射文件  
+    - classpath:mybatis/mapper/**/*.xml                                 #mapper映射文件
 
-eureka:
-  instance:
-    hostname: eureka7001.com
-
----
-
-server:
-  port: 7001
-
-spring:
-  profiles: test #开发环境
-  application:
-    name: microservicecloud-config-eureka-client
-    
 eureka:
   client:
     service-url:
@@ -102,3 +74,5 @@ eureka:
     prefer-same-zone-eureka: true  #访问路径可以显示IP地址
   instance:
     instance-id: microservicecloud-dept8001       #自定义服务名称信息
+
+
